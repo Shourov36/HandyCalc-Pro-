@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    tools:context=".Bmi"
+    android:layout_marginTop="50dp">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/textback"
+        android:gravity="center"
+        android:text="What is your name?"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Name"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+
+
+        app:boxStrokeColor="@color/design_default_color_secondary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/textback"
+        android:gravity="center"
+        android:text="Enter Your Weight"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="KG"
+        app:boxBackgroundColor="#FFFFFF"
+        app:boxBackgroundMode="outline"
+
+
+        app:boxStrokeColor="@color/design_default_color_secondary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/textback"
+        android:gravity="center"
+        android:text="Enter Your Height"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:hint="Feet"
+            app:boxBackgroundColor="#FFFFFF"
+
+            android:layout_marginRight="10dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/design_default_color_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edFeet"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:inputType="number|numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:hint="Inches"
+            app:boxBackgroundColor="#FFFFFF"
+            app:boxBackgroundMode="outline"
+
+            app:boxStrokeColor="@color/design_default_color_secondary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edInches"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:inputType="number|numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Calculate BMI"
+
+
+        />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:lottie_autoPlay="false"
+        android:layout_margin="10dp"
+        app:lottie_rawRes="@raw/congratulation"
+        android:id="@+id/congratulation"
+        android:visibility="gone"
+
+        />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:lottie_autoPlay="true"
+        android:layout_margin="10dp"
+        app:lottie_rawRes="@raw/warning"
+        android:id="@+id/warning"
+        android:visibility="gone"
+
+        />
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</LinearLayout>

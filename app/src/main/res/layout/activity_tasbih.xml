@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#fff"
+    >
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/rsz_back2"
+        android:scaleType="centerCrop"
+
+        >
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+
+            android:id="@+id/firsttext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape"
+            android:gravity="center"
+            android:text="Tasbih Counter"
+            android:textColor="#000"
+            android:textSize="40dp"
+            android:lineSpacingExtra="20dp"
+
+            >
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firsttext"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/custom_design"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#000"
+            android:textSize="150dp"
+
+
+            >
+
+        </TextView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/display"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Add One"
+            android:layout_gravity="center"
+
+            android:textSize="20dp"
+            android:textColor="#fff"
+
+            />
+
+        <Button
+
+            android:id="@+id/button2"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/button"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Sub One"
+            android:layout_gravity="center"
+
+            android:textSize="20dp"
+            android:layout_margin="15dp"
+            android:textColor="#fff"
+
+            />
+
+
+        <Button
+
+            android:id="@+id/button3"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="Reset"
+
+
+            android:textSize="20dp"
+            android:textColor="#fff"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
